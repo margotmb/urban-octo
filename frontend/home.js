@@ -1,5 +1,6 @@
-function Shortener(){
-    const url = document.getElementById('')
+function Login(){
+    const user = document.getElementById("unamefield").value
+    const pw = document.getElementById("pwfield").value
     const response = fetch('api_url',{
         method: 'POST',
         mode: 'cors',
@@ -7,7 +8,7 @@ function Shortener(){
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify ({"url" : url})
+        body: JSON.stringify ({"username" : user, "password" : pw})
 
       })
     
